@@ -1,5 +1,5 @@
 # AOD-Net
-AOD-Net is a light-weight but effective end-to-end dehazing nerual network.
+AOD-Net is a light-weight but effective end-to-end dehazing neural network.
 
 
 It is very easy and fast for you to train or test.

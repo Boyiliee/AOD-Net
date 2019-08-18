@@ -11,6 +11,9 @@ You can just use 'python test.py' with GPU/CPU, you can obtain your result in da
 
 Good luck for your research.
 
+# Improved AOD-Net
+Pytorch version will be updated.
+
 Bibtex:
 
 @inproceedings{ICCV17a,

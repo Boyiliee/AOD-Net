@@ -12,7 +12,7 @@ You can just use 'python test.py' with GPU/CPU, you can obtain your result in da
 Good luck for your research.
 
 # Improved AOD-Net with Positional Normalization (PONO)
-Pytorch version with [PONO](https://github.com/Boyiliee/PONO) will be updated. 
+We appreciate the [PyTorch implementation](https://github.com/TheFairBear/PyTorch-Image-Dehazing) of AOD-Net. Based on this code, we add simple [PONO](https://github.com/Boyiliee/PONO) into AOD-Net, which improves the performance efficiently.
 
 Bibtex:
 ```

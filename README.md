@@ -14,6 +14,8 @@ Good luck for your research.
 # Improved AOD-Net with Positional Normalization (PONO)
 We appreciate the [PyTorch implementation](https://github.com/TheFairBear/PyTorch-Image-Dehazing) of AOD-Net. Based on this code, we add simple [PONO](https://github.com/Boyiliee/PONO) into AOD-Net, which improves the performance efficiently.
 
+Please find in [AOD-Net with PONO](https://github.com/Boyiliee/AOD-Net/tree/master/AOD-Net%20with%20PONO) for details.
+
 Bibtex:
 ```
 @inproceedings{ICCV17a,

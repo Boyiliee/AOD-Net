@@ -12,7 +12,7 @@ You can just use 'python test.py' with GPU/CPU, you can obtain your result in da
 Good luck for your research.
 
 # Improved AOD-Net with Positional Normalization (PONO)
-Pytorch version will be updated.
+Pytorch version with [PONO](https://github.com/Boyiliee/PONO) will be updated. 
 
 Bibtex:
 ```

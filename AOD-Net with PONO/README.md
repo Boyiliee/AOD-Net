@@ -17,7 +17,7 @@ If you find this repo useful, please cite:
 @article{pono,
   title={Positional Normalization},
   author={Li, Boyi and Wu, Felix and Weinberger, Kilian Q. and Belongie, Serge},
-  journal={arXiv preprint arXiv:1907.04312},
+  journal={Advances in Neural Information Processing Systems},
   year={2019}
 }
 ```

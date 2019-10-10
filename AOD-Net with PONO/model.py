@@ -39,20 +39,20 @@ class AOD_pono_net(nn.Module):
         self.conv5 = nn.Conv2d(in_channels=12, out_channels=3, kernel_size=3, stride=1, padding=1)
         self.b = 1
 
-        self.spa = SpatialNorm(affine=False)
-        self.spade = SpatialDeNorm()
+        self.pono = PONO(affine=False)
+        self.ms = MS()
 
     def forward(self, x):
         x1 = F.relu(self.conv1(x))
         x2 = F.relu(self.conv2(x1))
         cat1 = torch.cat((x1, x2), 1)
-        x1, mean1, std1 = self.spa(x1)
-        x2, mean2, std2 = self.spa(x2)
+        x1, mean1, std1 = self.pono(x1)
+        x2, mean2, std2 = self.pono(x2)
         x3 = F.relu(self.conv3(cat1))
         cat2 = torch.cat((x2, x3), 1)
-        x3 = self.spade(x3, mean1, std1)
+        x3 = self.ms(x3, mean1, std1)
         x4 = F.relu(self.conv4(cat2))
-        x4 = self.spade(x4, mean2, std2)
+        x4 = self.ms(x4, mean2, std2)
         cat3 = torch.cat((x1, x2, x3, x4), 1)
         k = F.relu(self.conv5(cat3))
 
@@ -62,9 +62,9 @@ class AOD_pono_net(nn.Module):
         output = k * x - k + self.b
         return F.relu(output)
 
-class SpatialNorm(nn.Module):
+class PONO(nn.Module):
     def __init__(self, input_size=None, return_stats=False, affine=True, eps=1e-5):
-        super(SpatialNorm, self).__init__()
+        super(PONO, self).__init__()
         self.return_stats = return_stats
         self.input_size = input_size
         self.eps = eps
@@ -84,9 +84,9 @@ class SpatialNorm(nn.Module):
             x = x * self.gamma + self.beta
         return x, mean, std
 
-class SpatialDeNorm(nn.Module):
+class MS(nn.Module):
     def __init__(self, beta=None, gamma=None):
-        super(SpatialDeNorm, self).__init__()
+        super(MS, self).__init__()
         self.gamma, self.beta = gamma, beta
 
     def forward(self, x, beta=None, gamma=None):

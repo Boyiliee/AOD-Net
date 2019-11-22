@@ -14,10 +14,11 @@ If you find this repo useful, please cite:
   year={2017}
 }
 
-@article{pono,
+@inproceedings{li2019positional,
   title={Positional Normalization},
-  author={Li, Boyi and Wu, Felix and Weinberger, Kilian Q. and Belongie, Serge},
-  journal={Advances in Neural Information Processing Systems},
+  author={Li, Boyi and Wu, Felix and Weinberger, Kilian Q and Belongie, Serge},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={1620--1632},
   year={2019}
 }
 ```

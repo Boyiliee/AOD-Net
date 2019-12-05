@@ -1,4 +1,4 @@
-We appreciate the [PyTorch implementation](https://github.com/TheFairBear/PyTorch-Image-Dehazing) of AOD-Net. Based on this code, we add simple [PONO](https://github.com/Boyiliee/PONO) into AOD-Net, which improves the performance efficiently.
+We appreciate the [PyTorch implementation](https://github.com/TheFairBear/PyTorch-Image-Dehazing) of AOD-Net. Based on this code, we add simple [PONO and MS](https://github.com/Boyiliee/PONO) into AOD-Net, which improves the performance efficiently.
 
 Previous AOD-Net Results:
 ![](../AOD-Net_result.png)

@@ -1,4 +1,7 @@
 # AOD-Net
+
+ICCV 2017 
+
 AOD-Net is a light-weight but effective end-to-end dehazing neural network.
 
 
